@@ -51,7 +51,7 @@
 						 	<option value="3">Mrs.</option>
 						</select>
 
-						<input id="firstname" type="text" value="" placeholder="Firstname" data-subline="For example: <em>Jeremy</em> "/>
+						<input id="firstname" type="text" placeholder="Firstname" data-subline="For example: <em>Jeremy</em> "/>
 
 						<input id="lastname" type="text" value="" placeholder="Lastname" data-subline="For example: <em>Lin</em> "/>
 						<br/>
@@ -114,7 +114,7 @@
 						-->
 
 						<div class="nl-submit-wrap">
-							<button class="nl-submit" type="submit">Submit</button>
+							<button class="nl-submit" type="submit" onclick="checkInput()">Submit</button>
 						</div>
 
 						<div class="reminder"><span>*</span> Must fill in<span class="chooseOne"><span>^</span>Choose one to fill in</span></div>
@@ -125,6 +125,22 @@
 
 			</div>
 		</div><!-- /container -->
+		<script>
+
+			function checkInput()
+			{
+				$("#nl-form").submit()
+				{
+					if ($("#firstname").val().length=="") 
+					{
+					    alert("empty");
+					}
+						
+				}
+
+			}
+
+		</script>
 		<script src="js/nlform.js"></script>
 		<script>
 			var nlform = new NLForm( document.getElementById( 'nl-form' ) );

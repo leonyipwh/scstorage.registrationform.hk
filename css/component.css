@@ -249,6 +249,7 @@ font-size: 30px;
 
 #hkBtn.active{ 
 	background:#494949;
+	border: 2px solid #e60013;
 
 }
 
@@ -268,6 +269,7 @@ font-size: 30px;
 #overseasBtn.active{
 
 	background:#494949;
+	border: 2px solid #e60013;
 
 }
 
