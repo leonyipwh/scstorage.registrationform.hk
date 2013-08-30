@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>SC Storage Form</title>
+		<meta name="description" content="Natural Language Form with custom text input and drop-down lists" />
+		<meta name="keywords" content="Natural Language UI, sentence form, text input, contenteditable, html5, css3, jquery" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	</head>
+	<body class="nl-blurred">
+		<div class="container demo-1">
+			<!-- Top Navigation -->
+			<div class="codrops-top clearfix">
+				<img src="images/logo.png"/>
+				<div class="right">
+					<span><a href="chineseForm.html">中文</a><span> | </span><a href="index.html">Eng</a></span>
+				</div>
+			</div>
+			<header>
+				<h1>SC Storage<span>Registration Form</span></h1>	
+
+			</header>
+
+			<div class="main clearfix">
+
+
+				<div class="selectCountry">
+					Country:
+					<a id="hkBtn" class="active" href="index.html">Hong Kong</a> 
+					<a id="overseasBtn" href="overseasForm.html">Out Of Hong Kong</a>
+				</div>
+
+
+
+
+					<form id="nl-form" class="nl-form">
+						<div class="star">*</div>
+
+						Name:
+							<select id="sex">
+							<option value="1" selected>Title</option>
+						 	<option value="1">Mr.</option>
+						 	<option value="2">Miss</option>
+						 	<option value="3">Mrs.</option>
+						</select>
+
+						<input id="firstname" type="text" value="" placeholder="Firstname" data-subline="For example: <em>Jeremy</em> "/>
+
+						<input id="lastname" type="text" value="" placeholder="Lastname" data-subline="For example: <em>Lin</em> "/>
+						<br/>
+						
+						<div class="star">*</div>
+
+						ID Number:
+						<input id="hkid" type="text" value="" placeholder="Passport / HKID No." data-subline="For example: <em>Z123456(6)</em> "/>
+						<br/>
+
+						<div class="arrow">^</div>
+						
+						Mobile Phone Number: +852
+						<input id="mobileNum" type="text" value="" maxlength="8" placeholder="Mobile Phone no." data-subline="For example: <em>95097102</em> "/>
+						<br/>
+						
+						Telephone Number: +852
+						<input id="teleNum" type="text" value="" maxlength="8" placeholder="Telephone no." data-subline="For example: <em>21234567</em> "/>
+						<br/>
+
+						<div class="arrow">^</div>
+
+						Email:
+						<input id="email"  type="text" value="" placeholder="Email Address" data-subline="For example: <em>scstorage@email.com</em> "/>
+						<br/>
+
+						<div class="star">*</div>
+
+						Address:
+						</br>
+
+						<input id="flat"  type="text" value="" placeholder="Flat" data-subline="For example: <em>A</em>"/>
+
+						<input id="floor"  type="text" value="" placeholder="Floor" data-subline="For example: <em>1</em>"/>
+
+						
+						<input id="nameOfBuilding"  type="text" value="" placeholder="Name of building" data-subline="For example: <em>Amoycan Industrial Centre</em> "/> 
+
+						</br>
+
+						<input id="numOfStreet"  type="text" value="" placeholder="Number of building" data-subline="For example: <em>7</em> "/>
+
+						<input id="nameOfStreet"  type="text" value="" placeholder="Name of street" data-subline="For example: <em>Ngau Tau Kok Road</em> "/>
+
+ 
+						</br>	 
+						in
+						<select id="district">
+							<option value="0" selected>District</option>
+						 	<option value="1">Hong Kong Island </option>
+						 	<option value="2">Kowloon</option>
+						 	<option value="3">New Territories </option>
+						</select>
+						
+						
+						<!--
+						<div class="marginLeft">
+							in <input type="text" value="" placeholder="any city" data-subline="For example: <em>Los Angeles</em> or <em>New York</em>"/>
+						</div>
+						-->
+
+						<div class="nl-submit-wrap">
+							<button class="nl-submit" type="submit">Submit</button>
+						</div>
+
+						<div class="reminder"><span>*</span> Must fill in<span class="chooseOne"><span>^</span>Choose one to fill in</span></div>
+
+						<div class="nl-overlay"></div>
+					</form> 
+
+
+			</div>
+		</div><!-- /container -->
+		<script src="js/nlform.js"></script>
+		<script>
+			var nlform = new NLForm( document.getElementById( 'nl-form' ) );
+		</script>
+
+	
+	</body>
+</html>

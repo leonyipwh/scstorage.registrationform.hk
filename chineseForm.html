@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>SC Storage Form</title>
+		<meta name="description" content="Natural Language Form with custom text input and drop-down lists" />
+		<meta name="keywords" content="Natural Language UI, sentence form, text input, contenteditable, html5, css3, jquery" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body class="nl-blurred">
+		<div class="container demo-1">
+			<!-- Top Navigation -->
+			<div class="codrops-top clearfix">
+				<img src="images/logo.png"/>
+				<div class="right">
+					<span><a href="chineseForm.html">中文</a><span> | </span><a href="overseasChineseForm.html">Eng</a></span>
+				</div>
+			</div>
+			<header>
+				<h1>時昌迷你倉<span>客戶登記</span> </h1>	
+			</header>
+			<div class="main clearfix">
+
+				
+
+				<div class="selectCountry">
+					國家:
+					<a id="hkBtn" class="active" href="chineseForm.html">香港</a> 
+					<a id="overseasBtn"  href="overseasChineseForm.html">國外
+</a>
+				</div>
+
+				
+				<div id="hkForm">
+					<form id="nl-form" class="nl-form">
+
+						<div class="star">*</div>
+
+						客戶姓名:
+						<input id="firstname" type="text" value="" placeholder="姓" data-subline="例如: <em>陳</em> "/>
+						<input id="lastname" type="text" value="" placeholder="名" data-subline="例如: <em>大文</em> "/>
+						<select id="sex">
+							<option value="0" selected>稱謂</option>
+						 	<option value="1">先生</option>
+						 	<option value="2">小姐</option>
+						 	<option value="3">太太</option>
+						</select>
+
+						<br/>
+
+						<div class="star">*</div>
+						
+						身份證號碼:
+						<input id="hkid" type="text" value="" placeholder="香港身份證號碼" data-subline="例如: <em>Z123456(6)</em> "/>
+						<br/>
+
+						<div class="arrow">^</div>
+						
+						手提電話號碼: +852
+						<input id="mobileNum" type="text" value="" maxlength="8" placeholder="手提電話號碼" data-subline="例如: <em>95097102</em> "/>
+						<br/>
+						
+						常用電話號碼: +852
+						<input id="teleNum" type="text" value="" maxlength="8" placeholder="常用電話號碼" data-subline="例如: <em>21234567</em> "/>
+						<br/>
+
+						<div class="arrow">^</div>
+
+						電郵:
+						<input id="email"  type="text" value="" placeholder="電郵地址" data-subline="例如: <em>scstorage@email.com</em> "/>
+						<br/>
+
+						<div class="star">*</div>
+
+						地址:
+
+						</br>
+
+						<input id="nameOfStreet"  type="text" value="" placeholder="街道名稱" data-subline="例如: <em>牛頭角道</em>"/>
+						<input id="numOfStreet"  type="text" value="" placeholder="門牌號數" data-subline="例如: <em>7</em>"/>
+						<input id="nameOfBuilding"  type="text" value="" placeholder="大廈名稱" data-subline="例如: <em>淘大工業大廈</em>"/> 
+						<input id="floor"  type="text" value="" placeholder="層數" data-subline="例如: <em>1</em>"/>
+						<input id="flat"  type="text" value="" placeholder="單位" data-subline="例如: <em>A</em>"/>
+
+						在
+						<select id="district">
+							<option value="0" selected>分區</option>
+						 	<option value="1">香港島</option>
+						 	<option value="2">九龍</option>
+						 	<option value="3">新界</option>
+						</select>
+						
+						<!--
+						<div class="marginLeft">
+							in <input type="text" value="" placeholder="any city" data-subline="For example: <em>Los Angeles</em> or <em>New York</em>"/>
+						</div>
+						-->
+
+						<div class="nl-submit-wrap">
+							<button class="nl-submit" type="submit">提交</button>
+						</div>
+
+						<div class="reminder"><span>*</span>必需填寫<span class="chooseOne"><span>^</span>選擇一個填寫</span></div>
+
+						<div class="nl-overlay"></div>
+					</form>
+				</div>
+
+			</div>
+		</div><!-- /container -->
+		<script src="js/nlform.js"></script>
+		<script>
+			var nlform = new NLForm( document.getElementById( 'nl-form' ) );
+		</script>
+	</body>
+</html>
