@@ -13,6 +13,11 @@
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<script src="js/modernizr.custom.js"></script>
 		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+		<script src="js/toast/jquery.toastmessage.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/toast/jquery.toastmessage.css" />
+
+
 	</head>
 	<body class="nl-blurred">
 		<div class="container demo-1">
@@ -104,7 +109,10 @@ West Kowloon</em>"/>
 						-->
 
 						<div class="nl-submit-wrap">
-							<button class="nl-submit" type="submit">Submit</button>
+							<!--
+							<button class="nl-submit" type="submit" onclick="checkInput()" >Submit</button>
+							-->
+							<a class="nl-submitNew" type="submit" onclick="checkInput()" >Submit</a>
 						</div>
 
 						<div class="reminder"><span>*</span> Must fill in<span class="chooseOne"><span>^</span>Choose one to fill in</span></div>
@@ -115,6 +123,24 @@ West Kowloon</em>"/>
 
 			</div>
 		</div><!-- /container -->
+		<script>
+
+			function checkInput()
+			{
+
+					if ($("#firstname").val().length=="" || $("#lastname").val().length=="" || $("#hkid").val().length=="" || $("#mailingAddress").val().length=="" ) 
+					{
+						$().toastmessage('showToast', 
+						{
+							text     : 'Please fill in blanks',
+							sticky   : true,
+							position : 'top-right',
+							type     : 'warning',
+							close    : function () {console.log("warning");}
+						 });
+		    		}
+		    }
+		</script>
 		<script src="js/nlform.js"></script>
 		<script>
 			var nlform = new NLForm( document.getElementById( 'nl-form' ) );

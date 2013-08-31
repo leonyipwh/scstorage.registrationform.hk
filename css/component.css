@@ -25,7 +25,7 @@
 
 .reminder .chooseOne
 {
-	margin-left: 30px;
+	margin-left: 27px;
 	margin-bottom: 30px;
 	font-size: 10px;
 	color:#000000;
@@ -333,6 +333,19 @@ input:focus::-ms-input-placeholder {
 	letter-spacing: 3px;
 }
 
+.nl-form .nl-submitNew {
+	line-height: 3;
+	text-transform: uppercase;
+	cursor: pointer;
+	position: relative;
+	background:#a0a59c;
+	color: #fff;
+	padding: 1em 4em 1em 4em;
+	font-size: 50%;
+	font-weight: bold;
+	letter-spacing: 3px;
+}
+
 .nl-submit:before {
 	content: "\e001";
 	color: #fff;
@@ -343,11 +356,11 @@ input:focus::-ms-input-placeholder {
 }
 
 .no-touch .nl-form .nl-submit:hover,
-.no-touch .nl-form .nl-submit:active {
+.no-touch .nl-form .nl-submit:active, .nl-submitNew:hover{
 	background:#626262;
 }
 
-.no-touch .nl-form .nl-submit:hover:before {
+.no-touch .nl-form .nl-submit:hover:before, .nl-submitNew{
 	background: #7b7b7b;
 }
 
@@ -386,8 +399,12 @@ input:focus::-ms-input-placeholder {
 
 	.reminder 
 	{	
+		margin-right: 20px;
+	}
 
-	margin-right: 20px;
+	.nl-form .nl-submitNew 
+	{
+		padding: 1em 2.5em 1em 2.5em;
 	}
 }
 
